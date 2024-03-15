@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    /* -- font size --*/
+    --ff-800:1.25rem;
+    --ff-700:1rem;
+    --ff-600:0.875rem;
+    --ff-500:0.75rem;
+
+    /* -- color --*/
+    --light-purple:hsl(256, 81%, 65%);
+    --purple:hsl(261, 65%, 50%);
+    --very-dark-blue:hsl(222, 36%, 11%);
+    --dark-blue:hsl(217, 24%, 17%);
+    --very-dark-gray:hsl(219, 17%, 27%);
+    --dark-gray:hsl(217, 12%, 34%);
+    --gray:hsl(240, 4%, 65%);
+    --white:hsl(220, 13%, 91%);
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--white);
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(circle at top left, #421f83, transparent 30%, #121826, transparent 100%), 
+    radial-gradient(circle at bottom right, #35166d, transparent 30%, #121826, transparent 100%), 
+    linear-gradient(to right, #121826, #121826);
+}
+
+h1{
+    font-size: var(--ff-800);
+    font-weight: 600;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    border: 2px solid var(--dark-gray);
+    padding: 2rem;
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+    width: 450px;
+    height: 380px;
+}
+
+.form-step{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-step input{
+    padding: 0.9rem 0.5rem;
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    border: 2px solid var(--dark-gray);
+    background-color: transparent;
+    font-weight: 500;
+}
+
+.form-step input::placeholder{
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.form-step input:focus{
+    border: none;
+    background-color: transparent;
+    outline:2px solid var(--light-purple);
+}
+
+.form-content{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+.label-name{
+    font-size: var(--ff-600);
+    color: var(--gray);
+    padding-bottom: 5px;
+}
+
+.submit{
+    align-self: center;
+    background-color: var(--purple);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: var(--ff-700);
+    font-weight: 500;
+    border-radius: 50px;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.submit:hover{
+    transform: scale(1.05);
+}
+
+.form-step.two{
+    gap: 1.2rem;
+}
+
+.form-topics{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-topics button{
+    background-color: var(--dark-gray);
+    border: none;
+    padding: 1.1rem 0.8rem;
+    text-align: start;
+    border-radius: 0.5rem;
+    font-size: var(--ff-700);
+    color: var(--white);
+    font-weight: 500;
+    transition: all 200ms ease-in-out;
+}
+
+.form-topics button:hover{
+    transform: scale(1.05);
+}
+
+button.active{
+    background-color: var(--purple);
+}
+
+[hidden]{
+    display: none;
+}
+
+.form-result > *{
+    margin-bottom: 10px;
+}
+
+.form-result p{
+    color: var(--gray);
+}
+
+.form-result p span{
+    color: var(--white);
+    font-weight: 500;
+}
+.steps{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.steps p{
+    font-size: var(--ff-600);
+    color: var(--very-dark-gray);
+}
+
+.dot{
+    display: flex;
+    gap: 10px;
+}
+
+.dot-item{
+    position: relative;
+    display: flex;
+    align-self: center;
+    width: 10px;
+    height: 10px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 300ms ease;
+}
+
+.dot-item.active-tab{
+    outline: 3px solid hsla(257, 63%, 57%, 0.692);
+}

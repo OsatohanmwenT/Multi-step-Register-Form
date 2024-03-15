@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Web Developer Starter - devchallenges.io</title>
+</head>
+<body>
+    <div class="container">
+        <form action="info">
+            <div class="form-step one">
+                <h1>Register</h1>
+                <div>
+                    <div class="form-content">
+                        <label for="name" class="label-name">Name</label>
+                        <input type="text" id="name-input" placeholder="enter your name">
+                    </div>
+                    <div class="form-content">
+                        <label for="email" class="label-name">Email</label>
+                        <input type="email" id="email-input" placeholder="example@gmail.com">
+                    </div>
+                </div>
+                <button type="button" class="submit btn-one">Continue</button>
+            </div>
+            <div class="form-step two" hidden>
+                <h1>Which topics you are interested in?</h1>
+                <div class="form-topics">
+                    <button type="button" class="options">Software Development</button>
+                    <button type="button" class="options">User Experience</button>
+                    <button type="button" class="options">Graphic Design</button>
+                </div>
+                <button type="button" class="submit btn-two">Continue</button>
+            </div>
+            <div class="form-step three" hidden>
+                <h1>Summary</h1>
+                <div class="form-result">
+                    <p class="reult-info name"></p>
+                    <p class="reult-info email"></p>
+                    <div id="topic">
+                        <p class="result-info topics">Topics:</p>
+                        <ul id="selected-interests-list">
+                            <!-- Selected interests will be dynamically added here -->
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="submit btn-three">Confirm</button>
+            </div>
+        </form>
+        <div class="steps">
+            <p>Step <span id="step">1</span> of 3</p>
+            <div class="dot">
+                <div class="dot-item active-tab"></div>
+                <div class="dot-item"></div>
+                <div class="dot-item"></div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
