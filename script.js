@@ -18,7 +18,6 @@ btn.addEventListener("click",()=>{
         btn.parentElement.setAttribute("hidden",true)
         btn.parentElement.nextElementSibling.removeAttribute("hidden")
         thirdStep(nameInput.value,emailInput.value)
-        dot.nextElementSibling.classList.add("active-tab")
         stepTab.innerHTML = "2"
     }
 })
